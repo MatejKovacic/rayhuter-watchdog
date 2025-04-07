@@ -72,10 +72,10 @@ fn spawn_daemon() {
         .spawn()
     {
         Ok(_) => {
-            log_crash("Daemon started.");
+            log_crash("Rayhunter started.");
         }
         Err(e) => {
-            log_crash(&format!("Failed to start daemon: {}", e));
+            log_crash(&format!("Failed to start Rayhunter: {}", e));
         }
     }
 }
@@ -83,7 +83,7 @@ fn spawn_daemon() {
 fn main() {
     loop {
         if !is_daemon_running() {
-            log_crash("Daemon not running. Restarting...");
+            log_crash("Rayhunter not running. Restarting...");
             spawn_daemon();
         }
         thread::sleep(Duration::from_secs(CHECK_INTERVAL_SECS));
