@@ -158,14 +158,14 @@ Now we kill the running Rayhunter daemon process:
 / # killall -9 17135
 ```
 
-Check the processes and you will see, is actually not running anymore...
+Check the processes and you will see that it is actually not running anymore...
 ```
 / # ps -A | grep ray
 17029 root       0:00 ./rayhunter_watchdog_daemon
 17514 root       0:00 grep ray
 ```
 
-However after a few seconds is is respawned:
+However after a few seconds it is respawned:
 ```
 / # ps -A | grep ray
 17029 root       0:00 ./rayhunter_watchdog_daemon
@@ -173,7 +173,7 @@ However after a few seconds is is respawned:
 17612 root       0:00 grep ray
 ```
 
-We can also check `crash.log`:
+We can also check `crash.log` to see when it crashed (please note that times are local, time zones are not taken into account):
 ```
 / # cat /media/card/crash.log 
 [2025-04-07 09:39:37] Daemon not running. Restarting...
