@@ -60,8 +60,13 @@ linker = "arm-linux-gnueabihf-gcc"
 rustflags = ["-C", "target-feature=+crt-static"]
 ```
 
-## Application
+## Compile application
 Copy [main.rs](main.rs) from this repository to `src/main.rs`:
+
+Add the musl target:
+```
+rustup target add armv7-unknown-linux-musleabihf
+```
 
 Build it:
 ```
